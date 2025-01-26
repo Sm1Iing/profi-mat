@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="pic.png">
+    <title>Структура экзамена</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body{
+            background-color: rgb(174, 186, 228);
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        #заголовок {
+            text-align: center;
+            font-family: Garamond, serif;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            overflow-x: auto; /* Горизонтальная прокрутка для таблицы */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            min-width: 500px; /* Минимальная ширина таблицы */
+        }
+        th, td {
+            padding: 6px 8px; /* Ещё меньше padding */
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 13px; /* Уменьшенный размер шрифта */
+        }
+        th {
+            background-color: #3f2b96; /* Однотонный цвет для заголовков */
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05); /* Увеличение строки */
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для эффекта "поднятия" */
+            z-index: 1; /* Чтобы строка была поверх других */
+        }
+        /* Фиксированная ширина для столбцов */
+        th:nth-child(1), td:nth-child(1) {
+            width: 8%; /* Уже первый столбец */
+        }
+        th:nth-child(2), td:nth-child(2) {
+            width: 12%; /* Уже второй столбец */
+        }
+        th:nth-child(3), td:nth-child(3) {
+            width: 12%; /* Уже третий столбец */
+        }
+        th:nth-child(4), td:nth-child(4) {
+            width: 28%; /* Уже четвёртый столбец */
+        }
+        th:nth-child(5), td:nth-child(5) {
+            width: 28%; /* Уже пятый столбец */
+        }
+        .center-table {
+            margin: 0 auto;
+            width: 50%; /* Ширина таблицы */
+            overflow-x: visible; /* Убираем горизонтальную прокрутку */
+        }
+        .compact-table {
+            width: auto; /* Автоматическая ширина таблицы */
+            min-width: unset; /* Убираем минимальную ширину */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="navbar-brand" href="C:\Users\Redmi\Downloads\favicon.ico">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="first.html">главная</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  подготовка
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="numbers.html">№1 числа и вычисления</a></li>
+                  <li><a class="dropdown-item" href="equations.html">№2 уравнения и неравенства</a></li>
+                  <li><a class="dropdown-item" href="functions.html">№3 функции и графики</a></li>
+                  <li><a class="dropdown-item" href="analysis.html">№4 начала математического анализа</a></li>
+                  <li><a class="dropdown-item" href="logic.html">№5 множества и логика</a></li>
+                  <li><a class="dropdown-item" href="chance.html">№6 вероятность и статистика</a></li>
+                  <li><a class="dropdown-item" href="geometry.html">№7 геометрия</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  практика
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="practica.html">1 тема</a></li>
+                  <li><a class="dropdown-item" href="equations.html">2 тема</a></li>
+                  <li><a class="dropdown-item" href="functions.html">3 тема</a></li>
+                  <li><a class="dropdown-item" href="analysis.html">4 тема</a></li>
+                  <li><a class="dropdown-item" href="logic.html">5 тема</a></li>
+                  <li><a class="dropdown-item" href="chance.html">6 тема</a></li>
+                  <li><a class="dropdown-item" href="geometry.html">7 тема</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="polezno.html">полезные ресурсы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="demo.html">демоверсия</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="structure.html">структура ЕГЭ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">ВЕЛ - вынеси ЕГЭ с локтя</a>
+              </li>
+            </ul>
+            <img src="pic.png" width="40">
+          </div>
+        </div>
+      </nav>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<hr>
+<p></p>
+<p></p>
+<h1 id="заголовок">
+    Структура ЕГЭ по профильной математике
+</h1>
+<p></p>
+<p></p>
+<hr>
+
+<div class="content">
+    <p style="font-size: 14px; color: #666;  margin-bottom: 20px;">
+        *** Б - базовый, П - повышенный, В - высокий.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>№ задания</th>
+                <th>Уровень сложности</th>
+                <th>Максимальный балл</th>
+                <th>Базовый уровень (примерное выполнение, мин)</th>
+                <th>Профильный уровень (примерное выполнение, мин)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>10</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>П</td>
+                <td>1</td>
+                <td>15</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Б</td>
+                <td>1</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>П</td>
+                <td>1</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>П</td>
+                <td>1</td>
+                <td>15</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>П</td>
+                <td>1</td>
+                <td>15</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>П</td>
+                <td>1</td>
+                <td>15</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>П</td>
+                <td>2</td>
+                <td>20</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>П</td>
+                <td>3</td>
+                <td>40</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>П</td>
+                <td>2</td>
+                <td>30</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>П</td>
+                <td>2</td>
+                <td>30</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>П</td>
+                <td>3</td>
+                <td>&mdash;</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>В</td>
+                <td>4</td>
+                <td>&mdash;</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>В</td>
+                <td>4</td>
+                <td>&mdash;</td>
+                <td>35</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+
+<div class="content center-table">
+    <h2 style = "text-align: center;">Перевод баллов</h2>
+    <table class="compact-table">
+        <thead>
+            <tr>
+                <th>Первичные баллы</th>
+                <th>Вторичные баллы</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>46</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>52</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>64</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>72</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>74</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>76</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>82</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>84</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>86</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+
+</body>
+</html>

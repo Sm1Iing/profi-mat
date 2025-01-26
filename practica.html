@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="pic.png">
+    <title>Тест №1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+
+        body{
+            background-color: rgb(174, 186, 228);
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1{
+            text-align: center;
+                font-family: Garamond, serif;
+                background-color: rgb(196, 204, 229);
+                margin: 20px
+        }
+
+        #button1{
+            font-family: Garamond, serif;
+            background-color: rgb(174, 186, 228);
+        }
+        #button2{
+            font-family: Garamond, serif;
+            background-color: rgb(174, 186, 228);
+        }
+
+        .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .question input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .question input:focus {
+      border-color: #4a90e2;
+      outline: none;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+
+    .question input.correct {
+      border-color: #28a745;
+      background-color: #e8f5e9;
+    }
+
+    .question input.incorrect {
+      border-color: #dc3545;
+      background-color: #f8d7da;
+    }
+
+    .result {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .correct {
+      color: #28a745;
+    }
+
+    .incorrect {
+      color: #dc3545;
+    }
+
+    .score {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #4a90e2;
+    }
+
+    .hint-button {
+      background:rgb(174, 186, 228);
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background 0.3s ease;
+      font-family: Garamond, serif;
+    }
+
+    .hint-button:hover {
+      background: rgb(174, 186, 228);
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #357abd;
+      transform: scale(1.05);
+    }
+
+    /* Адаптивность */
+    @media (max-width: 600px) {
+      .question p {
+        font-size: 16px;
+      }
+
+      .question input {
+        font-size: 14px;
+      }
+
+      .score {
+        font-size: 18px;
+      }
+    }
+
+    /* Скрываем тесты по умолчанию */
+    .test {
+      display: none;
+    }
+
+    .test.active {
+      display: block;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="navbar-brand" href="C:\Users\Redmi\Downloads\favicon.ico">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="first.html" >главная</a>
+              </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="numbers.html" >вернуться к теории</a>
+                </li>
+              <li class="nav-item">
+                    <a class="nav-link disabled">ВЕЛ - вынеси ЕГЭ с локтя</a>
+                  </li>
+            </ul>
+            <img src = "pic.png" width = "40">
+          </div>
+        </div>
+      </nav>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<hr>
+<p></p>
+<p></p>
+<h1 id = "заголовок">
+    Числа и вычисления. Тест
+</h1>
+    <hr>
+<div class="container">
+    <div class="tabs text-center mb-4">
+        <button class="btn btn-primary mx-2" onclick="showTest(1)" id = "button1"><strong>ВАРИАНТ 1</strong></button>
+        <button class="btn btn-primary mx-2" onclick="showTest(2)" id = "button2"><strong>ВАРИАНТ 2</strong></button>
+    </div>
+
+    <!-- Вариант 1 -->
+    <div id="test1" class="test active">
+      <div class="question">
+        <p>1. Найдите наибольший общий делитель чисел 36 и 48.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Наибольший общий делитель двух чисел — это наибольшее число, которое делит оба числа без остатка.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-1">
+        <div class="result" id="result1-1"></div>
+      </div>
+      <div class="question">
+        <p>2. Какое из чисел делится на 9: 123, 234, 345, 456?
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Число делится на 9, если сумма его цифр делится на 9.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-2">
+        <div class="result" id="result1-2"></div>
+      </div>
+      <div class="question">
+        <p>3. Представьте число 0.125 в виде обыкновенной дроби.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Обыкновенная дробь записывается в виде a/b, где a - числитель, b - знаменатель.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-3">
+        <div class="result" id="result1-3"></div>
+      </div>
+      <div class="question">
+        <p>4. Сколько будет 15% от 200?
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('15% от 200 = (15/100) * 200.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-4">
+        <div class="result" id="result1-4"></div>
+      </div>
+      <div class="question">
+        <p>5. Вычислите <img src = "p5.svg">.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Воспользуйся формулой разность квадратов!')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-5">
+        <div class="result" id="result1-5"></div>
+      </div>
+      <div class="question">
+          <p>6. Вычислите <img src = "p6.svg">.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Если степени имеют одинаковые показатели, то в процессе их перемножения следует умножить между собой основания, а показатель записать без изменений')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-6">
+        <div class="result" id="result1-6"></div>
+      </div>
+      <div class="question">
+        <p>7. Найдите <img src = "p7.svg">.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('При вынесении степени из основания степень переворачивается.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-7">
+        <div class="result" id="result1-7"></div>
+      </div>
+      <div class="question">
+        <p>8. Найдите значение <img src = "p8.svg">.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Синус двойного угла.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-8">
+        <div class="result" id="result1-8"></div>
+      </div>
+      <div class="question">
+        <p>9. Укажите, какое из чисел является иррациональным: √2, 0.5, 1/3, 0.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Иррациональные числа нельзя представить в виде дроби.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-9">
+        <div class="result" id="result1-9"></div>
+      </div>
+      <div class="question">
+        <p>10. Упростите выражение: (x² - 4)/(x - 2).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Формула сокращённого умножения - разность квадратов. ')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer1-10">
+        <div class="result" id="result1-10"></div>
+      </div>
+      <div class="score" id="score1"></div>
+      <button onclick="checkAnswers(1)">Проверить ответы</button>
+      <button onclick="resetTest(1)">Сбросить тест</button>
+    </div>
+
+    <!-- Вариант 2 -->
+    <div id="test2" class="test">
+      <div class="question">
+        <p>1. Найдите наименьшее общее кратное чисел 12 и 18.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('НОК двух чисел — это наименьшее число, которое делится на оба числа без остатка.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-1">
+        <div class="result" id="result2-1"></div>
+      </div>
+      <div class="question">
+        <p>2. Какое из чисел делится на 6: 123, 234, 345, 456?
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Число делится на 6, если оно делится и на 2, и на 3.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-2">
+        <div class="result" id="result2-2"></div>
+      </div>
+      <div class="question">
+        <p>3. Представьте число 0.75 в виде обыкновенной дроби.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('0.75 = 3/4.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-3">
+        <div class="result" id="result2-3"></div>
+      </div>
+      <div class="question">
+        <p>4. Сколько процентов составляет число 25 от 200?
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('(25 / 200) * 100% = 12.5%.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-4">
+        <div class="result" id="result2-4"></div>
+      </div>
+      <div class="question">
+        <p>5. Вычислите √(64) - √(9).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('√(64) = 8, √(9) = 3.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-5">
+        <div class="result" id="result2-5"></div>
+      </div>
+      <div class="question">
+        <p>6. Вычислите 8^(2/3).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('8^(2/3) = (∛8)^2 = 2^2 = 4.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-6">
+        <div class="result" id="result2-6"></div>
+      </div>
+      <div class="question">
+        <p>7. Найдите log₅(25).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('log₅(25) = 2, так как 5^2 = 25.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-7">
+        <div class="result" id="result2-7"></div>
+      </div>
+      <div class="question">
+        <p>8. Найдите значение cos(π).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('cos(π) = -1.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-8">
+        <div class="result" id="result2-8"></div>
+      </div>
+      <div class="question">
+        <p>9. Укажите, какое из чисел является рациональным: √3, 0.75, π, e.
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Рациональные числа можно представить в виде дроби.')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-9">
+        <div class="result" id="result2-9"></div>
+      </div>
+      <div class="question">
+        <p>10. Упростите выражение: (x² - 9)/(x + 3).
+          <button class="hint-button" data-bs-toggle="modal" data-bs-target="#hintModal" onclick="setHint('Формула сокращённого умножения - разность квадратов. ')">ПОДСКАЗКА</button>
+        </p>
+        <input type="text" id="answer2-10">
+        <div class="result" id="result2-10"></div>
+      </div>
+      <div class="score" id="score2"></div>
+      <button onclick="checkAnswers(2)">Проверить ответы</button>
+      <button onclick="resetTest(2)">Сбросить тест</button>
+    </div>
+  </div>
+  <div class="modal fade" id="hintModal" tabindex="-1" aria-labelledby="hintModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hintModalLabel">Подсказка</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body" id="hintContent">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const correctAnswers = {
+      1: ["12", "234", "1/8", "30", "33", "1,5", "-0,5", "6", "√2", "x + 2"],
+      2: ["6", "234, 456", "3/4", "12.5%", "5", "4", "2", "-1", "0.75", "x - 3"]
+    };
+
+    function showTest(testNumber) {
+      document.querySelectorAll('.test').forEach(test => test.classList.remove('active'));
+      document.getElementById(`test${testNumber}`).classList.add('active');
+    }
+
+    function checkAnswers(testNumber) {
+      const answers = correctAnswers[testNumber];
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const userAnswer = document.getElementById(`answer${testNumber}-${i}`).value.trim();
+        const inputElement = document.getElementById(`answer${testNumber}-${i}`);
+        const resultElement = document.getElementById(`result${testNumber}-${i}`);
+        if (userAnswer === answers[i - 1]) {
+          resultElement.textContent = "✅ Правильно!";
+          resultElement.className = "result correct";
+          inputElement.classList.add('correct');
+          inputElement.classList.remove('incorrect');
+          score++;
+        } else {
+          resultElement.textContent = `❌ Неправильно. Правильный ответ: ${answers[i - 1]}`;
+          resultElement.className = "result incorrect";
+          inputElement.classList.add('incorrect');
+          inputElement.classList.remove('correct');
+        }
+      }
+      document.getElementById(`score${testNumber}`).textContent = `Ваш результат: ${score}/10`;
+    }
+
+    function resetTest(testNumber) {
+      document.querySelectorAll(`#test${testNumber} input`).forEach(input => {
+        input.value = '';
+        input.classList.remove('correct', 'incorrect');
+      });
+      document.querySelectorAll(`#test${testNumber} .result`).forEach(result => {
+        result.textContent = '';
+      });
+      document.getElementById(`score${testNumber}`).textContent = '';
+    }
+
+    function setHint(hintText) {
+      document.getElementById('hintContent').textContent = hintText;
+    }
+  </script>
+
+
+</body>
+</html>

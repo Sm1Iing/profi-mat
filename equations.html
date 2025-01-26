@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="pic.png">
+    <title>Уравнения и неравенства</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body{
+            background-color: rgb(174, 186, 228);
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        #заголовок{
+            text-align: center;
+            font-family: Garamond, serif;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="navbar-brand" href="C:\Users\Redmi\Downloads\favicon.ico">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="first.html" >главная</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  подготовка
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="numbers.html">№1 числа и вычисления</a></li>
+            <li><a class="dropdown-item" href="equations.html">№2 уравнения и неравенства</a></li>
+            <li><a class="dropdown-item" href="functions.html">№3 функции и графики</a></li>
+            <li><a class="dropdown-item" href="analysis.html">№4 начала математического анализа</a></li>
+            <li><a class="dropdown-item" href="logic.html">№5 множества и логика</a></li>
+            <li><a class="dropdown-item" href="chance.html">№6 вероятность и статистика</a></li>
+            <li><a class="dropdown-item" href="geometry.html">№7 геометрия</a></li>
+                  
+                </ul>
+              </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  практика
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="practica.html">1 тема</a></li>
+            <li><a class="dropdown-item" href="equations.html">2 тема</a></li>
+            <li><a class="dropdown-item" href="functions.html">3 тема</a></li>
+            <li><a class="dropdown-item" href="analysis.html">4 тема</a></li>
+            <li><a class="dropdown-item" href="logic.html">5 тема</a></li>
+            <li><a class="dropdown-item" href="chance.html">6 тема</a></li>
+            <li><a class="dropdown-item" href="geometry.html">7 тема</a></li>
+
+                </ul>
+              </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="polezno.html" >полезные ресурсы</a>
+                </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="demo.html" >демоверсия</a>
+                </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="structure.html" >структура ЕГЭ</a>
+                </li>
+              <li class="nav-item">
+                    <a class="nav-link disabled">ВЕЛ - вынеси ЕГЭ с локтя</a>
+                  </li>
+            </ul>
+            <img src = "pic.png" width = "40">
+          </div>
+        </div>
+      </nav>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<hr>
+<p></p>
+<p></p>
+<h1 id = "заголовок">
+    Уравнения и неравенства
+</h1>
+<p></p>
+<p></p>
+<hr>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        1. Целые и дробно-рациональные уравнения
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          <strong>
+              Рациональные выражения &mdash;
+          </strong>
+          это выражение, в состав которого включены числа, переменные, арифметические действия и операции возведения в степень.
+          <br>
+          <br>
+          <strong>Выделяют два вида рациональных выражений:</strong>
+          <ol>
+              <li>
+                  <strong>Целые выражения.</strong> Состоят из чисел и переменных, содержат действия сложения, вычитания, умножения и деления на число, отличное от нуля.
+                  Целое выражение имеет смысл при любых значениях входящих в него переменных.
+              </li>
+              <li>
+                  <strong>Дробные выражения.</strong> Помимо действий сложения, вычитания, умножения и деления на число, отличное от нуля, содержат деление на выражение с переменными.
+                  Дробное выражение при некоторых значениях переменной может не иметь смысла. Значения переменных, при которых выражение имеет смысл, называют допустимыми значениями.
+              </li>
+          </ol>
+          Если обе части уравнения являются рациональным выражением, то такое уравнение называется <strong>рациональным.</strong>
+          <br>
+          <br>
+        <strong>Примеры решений целых рациональных уравнений:</strong>
+          <br>
+          <ol>
+              <li>
+                  <strong> x<sup>2</sup> - 6x + 9 = 0 </strong>
+                  <br>
+                  Это квадратное уравнение, которое можно решить тремя способами. Давайте рассмотрим каждый!
+                  <br>
+                  <ul>
+                      <li>
+                          <strong>С помощью дискриминанта:</strong>
+                          <br>
+                          <span style="border: 2px solid black;"> D = b<sup>2</sup> - 4ac </span>
+                          <br>
+                          В данном случае <strong>a = 1</strong>, <strong>b = -6</strong>, а <strong>c = 9</strong>. Поэтому:
+                          <br>
+                          D = (-6)<sup>2</sup> - 4 * 1 * 9 = 36 - 36 = 0
+                          <br>
+                          <strong>ВАЖНО!</strong> Если <strong>D > 0</strong>, то у нас <strong>два корня</strong>, если <strong>D = 0</strong>, то <strong>один корень</strong>, если <strong>D < 0</strong>, то <strong>корней нет</strong>.
+                          <br>
+                          Дискриминант равен 0, следовательно, будет только один корень. Давайте его найдём. Для этого воспользуемся специальной формулой:
+                          <br>
+                          <span style="border: 2px solid black;"> x<sub>1,2</sub> = <img src = "dis.png" width = "70"></span>
+                          <br>
+                          <strong>x = <sup>6</sup>/<sub>2</sub> = 3</strong> (это искомый корень)
+                      </li>
+                      <li>
+                          <strong>С помощью теоремы Виета</strong>(этой теоремой можно пользоваться только в случае <strong>приведённых</strong> уравнений. Это такие уравнений, в которых a = 1):
+                          <br>
+                          Многие её не любят, но на самом деле она очень простая. Сейчас докажу!
+                          <br>
+                          <span style="border: 2px solid black;">
+                              x<sub>1</sub> + x<sub>2</sub> = -b
+                              <br>
+                              x<sub>1</sub> * x<sub>2</sub> = c
+                          </span>
+                          <br>
+                          Давайте воспользуемся ей на нашем примере.
+                          <br>
+                          x<sup>2</sup> - 6x + 9 = 0
+                          <br>
+                          x<sub>1</sub> + x<sub>2</sub> = 6
+                          <br>
+                          x<sub>1</sub> * x<sub>2</sub> = 9
+                          <br>
+                          Отсюда можно понять, что <strong>x = 3</strong>
+                      </li>
+                      <li>
+                          <strong>С помощью ФСУ:</strong>
+                          <br>
+                          (x - y)<sup>2</sup> = x<sup>2</sup> - 2xy + y<sup>2</sup>
+                          <br>
+                          x<sup>2</sup> - 6x + 9 = 0
+                          <br>
+                          (x - 3)<sup>2</sup> = 0
+                          <br>
+                          <strong>x = 3</strong>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <strong><sup>x + 5</sup>/<sub>4</sub> = <sup>x - 9</sup>/<sub>6</sub></strong>
+                  <br>
+                  Домножим левую часть на 3, а правую на 2. Получаем:
+                  <br>
+                  <sup>3*(x + 5)</sup>/<sub>12</sub> = <sup>2*(x - 9)</sup>/<sub>12</sub>
+                  <br>
+                  3x + 15 = 2x - 18
+                  <br>
+                  3x - 2x = -15 - 18
+                  <br>
+                  x = -33
+              </li>
+          </ol>
+          <br>
+          <strong>Пример решения дробно-рационального уравнения:</strong>
+          <ol>
+              <li>
+                  <strong><sup>x</sup>/<sub>(x - 2)</sub> + <sup>5</sup>/<sub>x</sub> = 4</strong>
+                  <br>
+                  Появляется ограничение, иначе <strong>ОДЗ</strong>(область допустимых значений):
+                  <br>
+                  Знаменатель не может быть равен 0, следовательно
+                  <br>
+                  x ≠ 0; x ≠ 2
+                  <br>
+                  Дальше продолжаем решать наше уравнение. Переносим 4 влево и преобразовываем уравнение.
+                  <br>
+                  <sup> x<sup>2</sup> + 5*(x - 2) - 4x*(x - 2) </sup>/<sub>x*(x-2)</sub> = 0
+                  <br>
+                  <sup> x<sup>2</sup> + 5x - 10 - 4x<sup>2</sup> + 8x </sup>/<sub> x*(x-2) </sub> = 0
+                  <br>
+                  <sup> -3x<sup>2</sup> + 13x - 10 </sup>/<sub> x*(x-2) </sub> = 0
+                  <br>
+                  Теперь приравняем числитель и знаменатель к нулю и решим два уравнения.
+                  <br>
+                  Корни числителя: <br>-3x<sup>2</sup> + 13x - 10 = 0
+                  <br>
+                  D = b<sup>2</sup> - 4ac = 169 - 4 * (-3) * (-10) = 49
+                  <br>
+                  x<sub>1,2</sub> = <sup>-13 +- 7</sup>/<sub>2 * (-3)</sub>
+                  <br>
+                  <br>
+                  x<sub>1</sub> = <sup>13 + 7</sup>/<sub>6</sub> = <sup>20</sup>/<sub>6</sub> = <sup>10</sup>/<sub>3</sub>
+                  <br>
+                  x<sub>2</sub> = <sup>13 - 7</sup>/<sub>6</sub> = 1
+              </li>
+          </ol>
+      </div>
+
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        2. Иррациональные уравнения
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          Иррациональные выражения &mdash; это выражения, в которых присутствуют корни.
+          <br>
+          <strong>Иррациональные уравнения &mdash;</strong> это уравнения, содержащие неизвестный корень, находящийся под корнем. Всего существует 5 видов иррациональных уравнений. Давайте рассмотрим каждый:
+          <br>
+          <ul>
+              <li>
+                  <strong>ПЕРВЫЙ ВИД:</strong>
+                  <br>
+                  \( \sqrt[]{f(x)} \) = a
+                  <br>
+                  Для решения мы записываем ОДЗ и возводим обе части в квадрат:
+                  <img src = "ODZ.png" width = "100">
+                  <br>
+                  <strong>Пример:</strong>
+                  <br>
+                  \( \sqrt[]{3x - 1} \) = 2
+                  <br>
+                  ОДЗ: x ≥ <sup>1</sup>/<sub>3</sub>
+                  <br>
+                  <br>
+                  3x - 1 = 2<sup>2</sup>
+                  <br>
+                  3x - 1 = 4
+                  <br>
+                  3x = 5
+                  <br>
+                  x = <sup>5</sup>/<sub>3</sub>
+              </li>
+              <br>
+              <li>
+                  <strong>ВТОРОЙ ВИД:</strong>
+                  <br>
+                  \( \sqrt[]{f(x)} \) = \( \sqrt[]{g(x)} \)
+                  <br>
+                  Когда с обеих сторон стоит квадратный корень, алгоритм будет такой же:
+                  <img src = "ODZ2.png" width = "100">
+                  <br>
+                  <strong>Пример:</strong>
+                  <br>
+                  \( \sqrt[]{5x - 1} \) = \( \sqrt[]{3x + 19} \)
+                  <br>
+                  ОДЗ: x ≥ 0,2; x ≥ <sup>-19</sup>/<sub>3</sub>
+                  <br>
+                  Отсюда получается x ≥ 0,2.
+                  <br>
+                  <br>
+                  5x - 1 = 3x + 19
+                  <br>
+                  2x = 20
+                  <br>
+                  x = 10
+              </li>
+              <br>
+              <li>
+                  <strong>ТРЕТИЙ ВИД:</strong>
+                  <br>
+                  \( \sqrt[]{f(x)} \) = g(x)
+                  <br>
+                  <br>
+                  <strong>Решение:</strong> <img src = "ODZ3.png" width = "100">
+                  <br>
+                  <br>
+                  <strong>Пример:</strong>
+                  <br>
+                  <img src = "EXAMPLE1.png" width = "150">
+                  <br>
+                  ОДЗ: x ≥ -3
+                  <br>
+                  <br>
+                  x<sup>2</sup> - 3x = (x + 3)<sup>2</sup> <br>
+                  x<sup>2</sup> - 3x = x<sup>2</sup> + 6x + 9 <br>
+                  -9x = 9 <br>
+                  x = -1
+                  <br>
+                  <br>
+              </li>
+              <li>
+                  <strong>ЧЕТВЁРТЫЙ ВИД:</strong>
+                  <br>
+                  \( \sqrt[]{f(x)} \) + \( \sqrt[]{g(x)} \) = a
+                  <br>
+                  <br>
+                  <strong>Решение:</strong> <img src = "ODZ4.png" width = "200">
+                  <br>
+                  <strong>Пример:</strong>
+                  <br>
+                  \( \sqrt[]{x + 13} \) - \( \sqrt[]{x + 1} \) = 2
+                  <br>
+                  ОДЗ: x ≥ -1
+                  <br>
+                  (\( \sqrt[]{x + 13} \) - \( \sqrt[]{x + 1} \))<sup>2</sup> = 4
+                  <br>
+                  x + 13 - 2 * \( \sqrt[]{x + 13} \) * \( \sqrt[]{x + 1} \) + x + 1 = 4
+                  <br>
+                  2x + 10 = 2\( \sqrt[]{(x + 13) * (x + 1)} \)
+                  <br>
+                  Разделим на 2:
+                  <br>
+                  x + 5 = \( \sqrt[]{(x + 13) * (x + 1)} \)
+                  <br>
+                  (x + 5)<sup>2</sup> = (x + 13) * (x + 1)
+                  <br>
+                  x<sup>2</sup> + 10x + 25 = x<sup>2</sup> + x + 13x + 13
+                  <br>
+                  -4x = -12
+                  <br>
+                  x = 3
+                  <br>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        3. Тригонометрические уравнения
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Для начала надо подучить формулы!) </strong>
+          <br>
+          Думаю с <strong>основным тригонометрическим тождеством</strong> вы уже знакомы, но напомню! <br>
+          <img src="OTT.png" width = "230">
+          <br> Из него также вытекает два следующих уравнения:<br>
+          <img src="OTT2.jpg" width = "230"> <br>
+          <img src = "TRIGO1.jpg"> <br>
+          <img src = "TRIGO2.jpg" width = "600"> <br>
+          <br>
+          Также для решения тригонометрических уравнений нам понадобится следующее:
+          <br> <br>
+          <strong>ФОРМУЛЫ ПРИВЕДЕНИЯ</strong> <BR>
+          Чтобы эти огромные таблицы не пришлось заучивать, давайте расскажу об алгоритме, и для понимания рассмотрим пример. <br>
+          <ol>
+              <li>
+                  Например, нам дано <strong>sin(2π + x)</strong>.
+              </li>
+              <li>
+                  Представим тригонометрический круг. <STRONG>Если число находится на оси косинуса</STRONG>, то функция не меняется
+                  на противоположную, <strong>если на оси косинуса</strong>, то меняется. В нашем случае, 2π лежит на оси косинуса, значит синус остаётся.
+              </li>
+              <li>
+                  Дальше смотрим на аргумент и число, находящееся внутри функции. В нашем случае это 2π + x. <strong>Если мы прибавляем x,
+                  то мы двигаемся против часовой стрелки, если вычитаем &mdash; против.</strong> 2π находится справа, прибавляем x,
+                  поэтому мы оказываемся в 1 четверти. Если бы мы вычитали, то мы бы оказались во второй.
+              </li>
+              <li>
+                  На данном этапе мы ориентируемся на изначальную функцию, то есть, если бы функция поменялась на косинус, мы бы всё равно
+                  использовали сейчас синус. И теперь мы проверяем, какой знак у функции в той четверти, которую мы получили в предыдущем этапе.
+                  У нас синус и 1 четверть. Синус в первой четверти положительный. Так мы и получаем ответ:
+              </li>
+          </ol>
+          <strong>
+              sin(2π + x) = sinx
+          </strong>
+          <hr>
+          Все данные формулы помогут тебе решить не только задания из первой части, но и из второй. Давайте решим оба варианта! <br>
+          <strong>1. УРАВНЕНИЕ ИЗ ПЕРВОЙ ЧАСТИ</strong> <br>
+          <img src = "trigour1.jpg" width="200"> <br>
+          <strong>2. УРАВНЕНИЕ ИЗ ВТОРОЙ ЧАСТИ</strong> <br>
+          <img src = "trigour2.jpg" width="250"> <br>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        4. Показательные и логарифмические уравнения.
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          <strong>ПОКАЗАТЕЛЬНЫЕ УРАВНЕНИЯ</strong> <br>
+          Вы уже знаете свойства степеней, поэтому в силах решать показательные уравнения. Всего их 4 вида. Такие уравнения могут встретиться как в первой, так и во второй части.
+
+          <br>
+          <strong>1. ПРОСТЕЙШИЕ</strong> <br>
+          Для решения этого вида нужно просто привести к одинаковому основанию обе части. <br>
+          <img src = "pok1.jpg" width = "150">
+          <br>
+          <strong>2. ВЫНЕСЕНИЕ ОБЩЕГО МНОЖИТЕЛЯ</strong><br>
+          Нужно разложить выражения, используя свойства степеней, и вынести общий множитель.
+          <br>
+          <img src = "pok2.jpg" width = "170"> <br>
+          <strong>3. СВОДЯЩИЕСЯ К КВАДРАТНЫМ</strong>
+          <br>
+          Вводим новую переменную, то есть используем замену.<br>
+          <img src = "pok3.jpg" width = "300"> <br>
+          <strong>4. ОДНОРОДНЫЕ</strong> <br>
+          Для решения нужно поделить уравнение на определенное степенное выражение, чтобы получить квадратное. <br>
+          <img src = "pok4.jpg" width = "350">
+          <hr>
+          <br>
+          <strong>ЛОГАРИФМИЧЕСКИЕ УРАВНЕНИЯ</strong> <br>
+          Также есть несколько видов, каждый из которых мы сейчас разберем. <br> <br>
+          <strong>1. ПРОСТЕЙШИЕ</strong><br>
+          Они решаются с помощью определения логарифмов. <br>
+          <img src = "logur1.png" width ="150">
+          <br>
+          5x - 1 = 4 <br>
+          5x = 5 <br>
+          x = 1 <br>
+          <strong>*** В таком уравнении можно опустить ОДЗ и просто сделать проверку корня(-ей).</strong> <br> <br>
+          <strong>2. ПОТЕНЦИРОВАНИЕ</strong> <br>
+          Означает переход он равенства, содержащего логарифмы, к равенству, не содержащему логарифмы.<br>
+          \( \log_2(3x-6) \) = \( \log_2(2x-3) \)<br>
+          <strong>ОДЗ:</strong> x > 2 <br>
+          3x - 6 = 2x - 3<br>
+          x = 3 <br> <br>
+          <strong>3. ПРИВЕДЕНИЕ К ОДНОМУ ОСНОВАНИЮ</strong><br>
+          В подобных уравнениях нужно воспользоваться свойствам логарифмов. <br>
+          \( \log_2 x \) + \( \log_x 2 \) = 2 <br>
+          <strong>ОДЗ:</strong> x>0; x≠1 <br>
+          <img src="logur2.png" width = "130"> <br>
+          <strong>Замена:</strong> \( \log_2 x \) = y <br>
+          <img src = "logur3.png" width = "90"> <br>
+          y<sup>2</sup> + 1 = 2y <br>
+          y<sup>2</sup> - 2y + 1 = 0 <br>
+          (y - 1)<sup>2</sup> = 0 <br>
+          y = 1 <br>
+          <strong>Обратная замена:</strong> <br>
+          \( \log_2 x \) = 1 <br>
+          x = 2 <br>
+          <br>
+          <strong>4. ЛОГАРИФМИРОВАНИЕ</strong> <br>
+          Обе части равенства можно прологарифмировать по одному основанию. Этот метод является "обратным" методу потенцирования. <br>
+          <img src = "logur4.png" width = "300"> <br> <br>
+          <strong>5.ФУНКЦИОНАЛЬНО-ГРАФИЧЕСКИЙ МЕТОД</strong> <br>
+          Суть метода понятна из названия, мы должны построить в одной системе координат графики функций, записанные справа
+          и слева в уравнении, и найти абсциссы точек пересечения этих функций. <br>
+          \( \log_2 x \) = 3 - x <br>
+          <img src = "graph.png" width = "500"> <br>
+          x = 2 - искомый корень.
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+        5. Целые и дробно-рациональные неравенства
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          Вы уже знакомы с целыми и дробно-рациональными уравнениями. Неравенства отличаются только знаком, который стоит в выражении.
+          Наиболее удобным способом решения неравенств будет <strong>метод интервалов</strong>. Именно с ним и будем решать практически все неравенства. <br> <br>
+          <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+          <strong>АЛГОРИТМ РЕШЕНИЯ НЕРАВЕНСТВ МЕТОДОМ ИНТЕРВАЛОВ</strong>
+      </button>
+    </h2>
+    <div id="collapseThirteen" class="accordion-collapse collapse" >
+      <div class="accordion-body">
+          <ol>
+              <li>
+                  Привести неравенство к виду f(x)>0; f(x)<0. Справа должен быть 0.
+              </li>
+              <li>
+                  Решить уравнение f(x)=0. (При решении оформляем так: пишем "Корни:" и дальше решаем уравнение)
+              </li>
+              <li>
+                  Рисуем ось абсцисс(ось Х). На ней обозначаем все корни. Если неравенство строгое, то точки выколотые, иначе - закрашенные. Выколотые точки не входят в ответ.
+              </li>
+              <li>
+                  Определяем знаки на интервалах: Например, есть интервал от 0 до 4. Возьмем 1 и подставим в уравнение.
+                  Если значение уравнения отрицательное, ставим "-", положительное - "+".
+              </li>
+              <li>
+                  Дальше, переходя из одного интервала на другой, чередуем знаки. (Есть особые случаи, когда мы знак менять не будем. Такой пример разберем ниже.)
+              </li>
+              <li>
+                  Исходя из того, что нужно было найти, записываем ответ.
+              </li>
+          </ol>
+          <hr>
+          <strong>!!!ЗАПОМНИ!!!</strong> <br>
+          <strong><h4>Если корень находится в четной степени, переходя на другой интервал через него, знак не меняется.</h4></strong><br>
+          Вот пример такого случая: <br>
+          <img src = "In.png" width = "350">
+      </div>
+    </div>
+  </div>
+          <br>
+          Теперь давайте рассмотрим примеры таких неравенств.<br>
+          <strong>1. ЛИНЕЙНЫЕ</strong> <br>
+          <ol>
+              <li>
+                  3x + 20 < 5x + 6 <br>
+                  -2x < 14 | :(-2)<br>
+                  <strong>***при делении на отрицательное число знак неравенства меняется на противоположный</strong> <br>
+                  x > 7<br>
+                  Ответ: (7;+∞)
+              </li>
+              <br>
+              <li>
+                  x<sup>2</sup> > 9<br>
+                  x<sup>2</sup> - 9 > 0<br>
+                  (x - 3)(x + 3) > 0
+                  <p style="color: gray;">Запускаем метод интервалов!</p>
+                  Корни: x=3; x=-3 <br>
+                  <img src = "in1.png" width = "250"> <br>
+                  Ответ: (-∞;-3);(3;+∞)
+              </li>
+          </ol>
+          <hr>
+          <strong>2. ДРОБНЫЕ</strong>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+        6. Иррациональные неравенства
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+        7. Показательные и логарифмические неравенства
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+        8. Тригонометрические неравенства
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+        9. Системы и совокупности уравнений и неравенств
+      </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+        10. Уравнения, неравенства и системы с параметрами
+      </button>
+    </h2>
+    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+        11. Матрица системы линейных уравнений. Определитель матрицы
+      </button>
+    </h2>
+    <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+<br>
+    <br>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>

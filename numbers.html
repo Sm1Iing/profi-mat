@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="pic.png">
+    <title>Числа и вычисления</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body{
+            background-color: rgb(174, 186, 228);
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        #заголовок{
+            text-align: center;
+            font-family: Garamond, serif;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="navbar-brand" href="C:\Users\Redmi\Downloads\favicon.ico">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="first.html" >главная</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  подготовка
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="numbers.html">№1 числа и вычисления</a></li>
+            <li><a class="dropdown-item" href="equations.html">№2 уравнения и неравенства</a></li>
+            <li><a class="dropdown-item" href="functions.html">№3 функции и графики</a></li>
+            <li><a class="dropdown-item" href="analysis.html">№4 начала математического анализа</a></li>
+            <li><a class="dropdown-item" href="logic.html">№5 множества и логика</a></li>
+            <li><a class="dropdown-item" href="chance.html">№6 вероятность и статистика</a></li>
+            <li><a class="dropdown-item" href="geometry.html">№7 геометрия</a></li>
+
+                </ul>
+              </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  практика
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="practica.html">1 тема</a></li>
+            <li><a class="dropdown-item" href="equations.html">2 тема</a></li>
+            <li><a class="dropdown-item" href="functions.html">3 тема</a></li>
+            <li><a class="dropdown-item" href="analysis.html">4 тема</a></li>
+            <li><a class="dropdown-item" href="logic.html">5 тема</a></li>
+            <li><a class="dropdown-item" href="chance.html">6 тема</a></li>
+            <li><a class="dropdown-item" href="geometry.html">7 тема</a></li>
+
+                </ul>
+              </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="polezno.html" >полезные ресурсы</a>
+                </li>
+                <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="demo.html" >демоверсия</a>
+                </li>
+              <li class = "nav-item">
+                    <a class="nav-link active" aria-current="page" href="structure.html" >структура ЕГЭ</a>
+                </li>
+              <li class="nav-item">
+                    <a class="nav-link disabled">ВЕЛ - вынеси ЕГЭ с локтя</a>
+                  </li>
+            </ul>
+            <img src = "pic.png" width = "40">
+          </div>
+        </div>
+      </nav>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<hr>
+<p></p>
+<p></p>
+<h1 id = "заголовок">
+    Числа и вычисления
+</h1>
+<p></p>
+<p></p>
+<hr>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        1. Натуральные и целые числа. Признаки делимости целых чисел.
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. НАТУРАЛЬНЫЕ ЧИСЛА <br>
+        <strong>Натуральные числа</strong> &mdash; это числа, которые используются для счёта
+        предметов: 1, 2, 3, 4, 5 и так далее. Множество натуральных чисел обозначается символом <strong>N</strong>.
+        <br>
+        <hr>
+        2. ЦЕЛЫЕ ЧИСЛА <br>
+        <strong>Целые числа</strong> &mdash; это расширение множества натуральных чисел, включающее
+        все натуральные числа, их отрицательные значения и ноль. Множество целых обозначается символом <strong>Z</strong>. <br>
+        <br>
+        Примеры целых чисел: -3, 0, 17, -43
+        <br> <hr>
+        3. ПРИЗНАКИ ДЕЛИМОСТИ ЦЕЛЫХ ЧИСЕЛ<br>
+        Признаки делимости - это правила, которые позволяют быстро определить, делится ли одно число на другое без остатка.<br>
+        Рассмотрим основные признаки делимости для целых чисел.<br> <br>
+        <strong>3.2 Признак делимости на 2</strong> <br>
+        Число делится на <strong>2</strong>, если его последняя цифра чётная (0, 2, 4, 6, 8).<br> <br>
+        <strong>3.3 Признак делимости на 3.</strong> <br>
+        Число делится на <strong>3</strong>, если сумма его цифр делится на 3. <br> <br>
+        <strong>3.3 Признак делимости на 4.</strong> <br>
+        Число делится на 4, если число, образованное его последними двумя цифрами, делится на 4. <br> <br>
+        <strong>3.4 Признак делимости на 5.</strong> <br>
+        Число делится на 5, если его последняя цифра 0 или 5.<br><br>
+        <strong>3.5. Признак делимости на 6.</strong><br>
+        Число делится на 6, если оно делится одновременно на 2 и на 3. <br> <br>
+        <strong>3.6. Признак делимости на 9.</strong> <br>
+        Число делится на 9, если сумма его цифр делится на 9.<br><br>
+        <strong>3.7. Признак делимости на 10.</strong> <br>
+        Число делится на 10, если его последняя цифра 0.<br>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+        2. Рациональные и десятичные числа. Обыкновенные и десятичные дроби, проценты, бесконечные и периодические дроби.
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. РАЦИОНАЛЬНЫЕ ЧИСЛА<br>
+        <strong>Рациональные числа</strong> &mdash; это числа, которые можно представить в виде дроби a/b, где a - числитель, b - знаменатель, b ≠ 0.
+        Множество рациональных чисел обозначается буквой <strong>Q</strong>. <br>
+        <hr>
+        2. ДЕСЯТИЧНЫЕ ЧИСЛА<br>
+        <strong>Десятичные числа</strong> &mdash; это числа, записанные в десятичной системе счисления. Они могут быть:<br>
+        <ul>
+          <li>
+            <strong>Конечными</strong> (например, 0.5, 0.36),
+          </li>
+          <li>
+            <strong>Бесконечными</strong> (например, 3.1417). Это дроби, у которых после запятой бесконечное множество цифр,
+          </li>
+          <li>
+            <strong>Периодическими</strong> (например, 1.3333, 0.666). Это дроби, у которых после запятой одна или несколько цифр повторяются.
+            Повторяющаяся часть называется периодом.
+          </li>
+        </ul>
+        <hr>
+        3. ОБЫКНОВЕННЫЕ ДРОБИ<br>
+        <strong>Обыкновенные дроби</strong> &mdash; это запись числа в виде a/b, где a - числитель, b - знаменатель, b ≠ 0.
+        Обыкновенные дроби могут быть: <br>
+        <ul>
+          <li>
+            Правильными (числитель больше знаменателя),
+          </li>
+          <li>
+            Неправильными (знаменатель больше числителя).
+          </li>
+        </ul>
+        <hr>
+        4. ДЕСЯТИЧНЫЕ ДРОБИ <br>
+        <strong>Десятичная дробь </strong> &mdash; это дробь, записанная в десятичной системе счисления.<br>
+        5. ПРОЦЕНТЫ <br>
+        <strong>Процент</strong> &mdash; это одна сотая часть. Обозначается % (1% = 1/100). <br>
+        Пример: 50% = 50/100<br>
+        <br>
+        Чтобы найти процент от числа k, надо разделить процент на 100 и умножить это на k. <br>
+        Например, надо найти 15 процентов от 90. (15/100) * 90 = 13,5
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+        3. Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. ОПРЕДЕЛЕНИЕ<br>
+        <strong>Арифметический корень</strong> натуральной степени n из числа a &mdash; это такое неотрицательное
+        число x, что <img src = "nat.png" width = "70">. <br>
+        <hr>
+        2. ДЕЙСТВИЯ С АРИФМЕТИЧЕСКИМИ КОРНЯМИ НАТУРАЛЬНОЙ СТЕПЕНИ<br>
+        <ol>
+          <li>
+            <strong>Упрощение выражений с корнями.</strong> <br>
+            √(50) = √(25 * 2) = 5√2
+          </li>
+          <li>
+            <strong>Сложение и вычитание корней.</strong> <br>
+            3√2 + 5√2 = 8√2
+          </li>
+          <li>
+            <strong>Умножение корней.</strong> <br>
+            √3 * √(12) = √(36) = 6
+          </li>
+          <li>
+            <strong>Деление корней.</strong> <br>
+            <img src = "tri.png" width = "170">
+          </li>
+          <li>
+            <strong>Возведение корня в степень.</strong> <br>
+            (√5)<sup>2</sup> = √(5<sup>2</sup>) = √(25) = 5
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+        4. Степень с цельным показателем. Степень с рациональным показателем. Свойства степеней.
+      </button>
+    </h2>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>СВОЙСТВА СТЕПЕНЕЙ</strong> <br>
+          <img  src = "stepeni.png" width = "150">
+       </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <div class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+       5. Логарифм числа. Десятичные и натуральные логарифмы.
+      </button>
+    </div>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. ОПРЕДЕЛЕНИЕ <br>
+        <strong>Логарифм числа b по основанию a</strong> &mdash; это показатель степени, в которую нужно возвести число a,
+         чтобы получить число b, где a > 0, a ≠ 1, b > 0. <br>
+        Записывается логарифм следующим образом: <br>
+        log<sub>a</sub>b = c, где a<sup>c</sup> = b.<br>
+        a &mdash; основание логарифма,<br>
+        b &mdash; подлогарифмическое выражение,<br>
+        c &mdash; значение логарифма.<br>
+        <hr>
+        2. ДЕСЯТИЧНЫЙ ЛОГАРИФМ <br>
+        <strong>Десятичный логарифм</strong> *mdash; это логарифм по основанию 10.
+        Записывается следующим образом: lg(a), где a &mdash; какое-то число.<br>
+        <hr>
+        3. НАТУРАЛЬНЫЙ ЛОГАРИФМ <br>
+        <strong>Натуральный логарифм</strong> &mdash; это логарифм по основанию <strong>e</strong> (число Эйлера, e ≈ 2.718).
+        Записывается следующим образом: ln(a), где a &mdash; какое-то число.<br>
+        <hr>
+        4. СВОЙСТВА ЛОГАРИФМОВ<BR>
+        <img src = "logcvo.png" width = "250">
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+        6. Синус, косинус и тангенс числового аргумента. Арксинус, арккосинус и арктангенс числового аргумента.
+      </button>
+    </h2>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. ОСНОВНЫЕ ТРИГОНОМЕТРИЧЕСКИЕ ФУНКЦИИ.
+        <br>
+        <strong>Синусом</strong> угла называют отношение противолежащего катета к гипотенузе.<br>
+        <strong>Косинусом</strong> угла называют отношение прилежащего катета к гипотенузе. <br>
+        <strong>Тангенсом</strong> угла называют отношение противолежащего катета к прилежащему. <br>
+        <img src = "trigo.png" width = "350">
+        <hr>
+        2. ЗНАЧЕНИЯ. <br>
+        <img src = "krug.jpg" width = "300"> <img src = "table.png" width = "400">
+        <br> <hr>
+        3. СВОЙСТВА.<br>
+        <strong>ОТТ (Основное Тригонометрическое Тождество):</strong>
+        <ul>
+          <img src = "OTT.png" width = "200"> <strong>(Обязательно запомни!!!)</strong>
+        </ul>
+        Из этого тождества вытекают следующие формулы: <br>
+        <ul>
+          <img src="OTT2.jpg" width = "200">
+        </ul>
+        <strong>Чётность и нечётность: </strong> <br>
+        <ul>
+          <li>
+            sin(-x) = -sinx (нечётная функция)
+          </li>
+          <li>
+            cos(-x) = cosx (чётная функция)
+          </li>
+          <li>
+            tg(-x) = -tgx (нечётная функция)
+          </li>
+        </ul>
+        <hr>
+        4. ОБРАТНЫЕ ТРИГОНОМЕТРИЧЕСКИЕ ФУНКЦИИ.<br>
+        Обратные тригонометрические функции возвращают угол по значению тригонометрической функции:<br>
+        <ul>
+          <li>
+            <strong>Арксинус (arcsin): </strong> <br>
+            arcsin(a) = x, если sinx = a, <img src = "pi2.png" width = "100">, <img src = "a.png" width = "80">
+           </li>
+          <li>
+            <strong>Арккосинус (arccos): </strong> <br>
+            arccos(a) = x, если cosx = a, <img src = "x.png" width="65">, <img src = "a.png" width = "80">
+          </li>
+          <li>
+            <strong>Арктангенс (arctg): </strong> <br>
+            arctg(a) = x, если tgx = a, <img src = "x2.png" width = "100">
+          </li>
+        </ul><hr>
+        5. <strong>СВОЙСТВА. </strong><br>
+        <ul>
+          sin(arcsin(a)) = a
+        </ul>
+        <ul>
+          cos(arccos(a)) = a
+        </ul>
+        <ul>
+          tg(arctg(a)) = a
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+        7. Действительные числа. Арифметические операции с действительными числами. Приближенные вычисления, правила округления, прикидка и оценка результата вычислений.
+      </button>
+    </h2>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. ДЕЙСТВИТЕЛЬНЫЕ ЧИСЛА. <br>
+        <strong>Действительные числа</strong> &mdash; это все рациональные и иррациональные числа. Множество действительных
+        чисел обозначает буквой <strong>R</strong>. Они включают:<br>
+        <ul>
+          <li>
+            <strong>Рациональные числа:</strong>
+          </li>
+          <li>
+            <strong>Иррациональные числа:</strong> это бесконечные и непериодические дроби. Их невозможно представить в виде
+            дроби.
+          </li>
+        </ul>
+        <hr>
+        2. СВОЙСТВА АРИФМЕТИЧЕСКИХ ОПЕРАЦИЙ. <br>
+        <ol>
+          <li>
+            <strong>Коммутативность сложения и умножения:</strong> a + b = b + a; a * b = b * a
+          </li>
+          <li>
+            <strong>Ассоциативность сложения и умножения:</strong> (a + b) + c = a + (b + c); (a * b) * c = a * (b * c)
+          </li>
+          <li>
+            <strong>Дистрибутивность умножения относительно сложения:</strong> a * (b + c) = a * b + a * c
+          </li>
+        </ol>
+        <hr>
+        3. ПРИБЛИЖЁННЫЕ ВЫЧИСЛЕНИЯ. <br>
+        При работе с действительными числами часто используются приближённые значения,
+        так как точные значения могут быть неизвестны или неудобны для вычислений. <br>
+        <strong>ПРАВИЛА ОКРУГЛЕНИЯ</strong>: <BR> <br>
+        <ul>
+          <li>
+            Если цифра в следующем разряде меньше 5, то текущий разряд не изменяется (3,1416 ≈ 3,14 &mdash; округление до сотых),
+          </li>
+          <li>
+            Если цифра в следующем разряде больше или равна 5, то текущий разряд увеличивается на 1 (2,73 ≈ 3 &mdash; округления до целых)
+          </li>
+        </ul>
+        <br>
+        <strong>ПРИКИДКА И ОЦЕНКА РЕЗУЛЬТАТА:</strong>: <br>
+        Прикидка — это приближённое вычисление результата с целью проверки его правдоподобности. <br>
+        Пример: Вычислите приближённое значение выражения 12.34 + 45.67<br>
+        12.34 ≈ 12; 45.67 ≈ 46<br>
+        12 + 46 = 58<br>
+        Точное значение: 12.34 + 45.67 = 58.01<br>
+        Прикидка близка к точному значению.
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+        8. Преобразование выражений.
+      </button>
+    </h2>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        1. ОСНОВНЫЕ МЕТОДЫ ПРЕОБРАЗОВАНИЙ.<br>
+        <ol>
+          <li>
+            <strong>Раскрытие скобок:</strong> <br>
+            <ul>
+              <li>
+                Если перед скобкой стоит знак "+", то скобки можно опустить, сохранив знаки всех слагаемых внутри.<br>
+                a + (b + c) = a + b + c
+              </li>
+              <li>
+                Если перед скобками стоит знак "+", то скобки можно опустить, изменив знаки всех слагаемых внутри. <br>
+                a - (b + c) = a - b - c
+              </li>
+              <li>
+                Если перед скобкой стоит множитель, то его нужно умножить на каждое слагаемое внутри скобок. <br>
+                a * (b + c) = a * b + a * c
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>ФСУ (Формулы сокращённого умножения):</strong> <br>
+            <img src = "fsu.png" width = "300">
+          </li>
+          <li>
+            <strong>Разложение на множители:</strong>
+            <ul>
+              <li>
+                Вынесение общего множителя за скобки: <br>
+                ab + ac = a * (b + c)
+              </li>
+              <li>
+                Группировка: <br>
+                ax + ay + bx + by = a * (x + y) + b * (x + y) = (x + y)(a + b)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Упрощение дробей:</strong> <br>
+            <ul>
+              <li>
+                Сокращение дробей: <br>
+                <img src = "drob.png" width = "70">
+              </li>
+              <li>
+                Приведение к общему знаменателю: <br>
+                <img src = "drob2.png" width = "180">
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+        9. Комплексные числа.
+      </button>
+    </h2>
+    <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>В разработке!</strong>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
